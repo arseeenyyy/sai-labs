@@ -1,0 +1,58 @@
+# запрос 1
+?- alive_in_year(Person,1995).
+Person = dmitrii ;
+Person = natalia ;
+Person = ludmila ;
+Person = misha ;
+Person = luybov ;
+Person = georgii ;
+Person = evgeniya ;
+Person = artem ;
+Person = svetlana ;
+Person = evgenii ;
+Person = victoriya ;
+Person = gleb ;
+
+# запрос 2
+?- spouse_in_year(dmitrii, Spouse, 2018). 
+Spouse = natalia ;
+
+# запрос 3 
+?- died_before(Person, 2018). 
+Person = misha ;
+
+# запрос 4
+?- parent_in_year(dmitrii, Child, 2005). 
+Child = egor ;
+Child = timothy ;
+Child = arseniy.
+
+# запрос 5 
+?- sibling(Sibling, arseniy). 
+Sibling = egor ;
+Sibling = timothy.
+
+# запрос 6
+?- brother(egor, arseniy). 
+true ;
+
+# запрос 7 
+?- grandparent(Grandparent, arseniy).
+Grandparent = georgii ;
+Grandparent = luybov ;
+Grandparent = misha ;
+Grandparent = ludmila ;
+
+# запрос 8
+?- aunt(Aunt, arseniy). 
+Aunt = svetlana ;
+Aunt = evgeniya ;
+Aunt = victoriya.
+
+# запрос 9
+?- oldest_alive_in_year(Person, 2020). 
+Person = luybov ;
+
+# запрос 10
+?- age_at_first_child(dmitrii, Age). 
+Age = 27 .
